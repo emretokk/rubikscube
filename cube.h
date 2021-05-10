@@ -103,6 +103,7 @@ public:
 	void printMatrix();
 
 	// Single Face rotation algorithms
+
 	void R();      // check
 	void Rt();     // check     
 	void R2();     // check  
@@ -133,32 +134,37 @@ public:
 	z - rotate the entire cube on F
 	*/
 
-	void x();
-	void y();
-	void z();
+	void x();      // check
+	void xt();     // check
+	void x2();     // check
+	void y();      // check
+	void yt();     // check
+	void y2();     // check
+	void z();      // check
+	void zt();     // check
+	void z2();     // check
 	
 
 	// Double Face rotation algorithms
 
-	// NEED REORIENTATION
-
-	void r();         // check
-	void rt();        // check
-	void r2();        // check
-	void l();         // check
-	void lt();        // check
-	void l2();        // check
-	void u();         // check
-	void ut();        // check
-	void u2();        // check
-	void d();         // check
-	void dt();        // check
-	void d2();        // check
-	void f();         // check
-	void ft();        // check
-	void f2();        // check
-
-
+	void r();      // check
+	void rt();     // check
+	void r2();     // check
+	void l();      // check
+	void lt();     // check
+	void l2();     // check
+	void u();      // check
+	void ut();     // check
+	void u2();     // check
+	void d();      // check
+	void dt();     // check
+	void d2();     // check
+	void f();      // check
+	void ft();     // check
+	void f2();     // check
+	void b();      // check
+	void bt();     // check
+	void b2();     // check
 
 };
 

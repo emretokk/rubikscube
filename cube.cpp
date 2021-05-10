@@ -2937,49 +2937,849 @@ void Cube::M2(){
 
 void Cube::r(){
 	this->L();
+	this->x();
 }
 
 void Cube::rt(){
-	this->Lt();
+	this->r();
+	this->r();
+	this->r();
 }
 
 void Cube::r2(){
-	this->L2();
+	this->r();
+	this->r();
 }
 
 void Cube::l(){
 	this->R();
+	this->xt();
 }
 
 void Cube::lt(){
-	this->Rt();
+	this->l();
+	this->l();
+	this->l();
+}
+
+void Cube::l2(){
+	this->l();
+	this->l();
+}
+
+void Cube::u(){
+	this->D();
+	this->y();
+}
+
+void Cube::ut(){
+	this->u();
+	this->u();
+	this->u();
+}
+
+void Cube::u2(){
+	this->u();
+	this->u();
 }
 
 void Cube::d(){
 	this->U();
+	this->yt();
 }
 
 void Cube::dt(){
-	this->Ut();
+	this->d();
+	this->d();
+	this->d();
 }
 
 void Cube::d2(){
-	this->U2();
+	this->d();
+	this->d();
 }
 
 void Cube::f(){
 	this->B();
+	this->z();
 }
 
 void Cube::ft(){
-	this->Bt();
+	this->f();
+	this->f();
+	this->f();
+}
+
+void Cube::f2(){
+	this->f();
+	this->f();
+}
+
+void Cube::b(){
+	this->F();
+	this->zt();
+}
+
+void Cube::bt(){
+	this->b();
+	this->b();
+	this->b();
+}
+
+void Cube::b2(){
+	this->b();
+	this->b();
+}
+
+void Cube::x(){
+	if (this->up == 'y')
+	{
+		if (this->front == 'b')
+		{
+			this->up = 'b';
+			this->down = 'g';
+			this->right = 'r';
+			this->left = 'o';
+			this->front = 'w';
+			this->back = 'y';
+		}
+		else if (this->front == 'r')
+		{
+			this->up = 'r';
+			this->down = 'o';
+			this->right = 'g';
+			this->left = 'b';
+			this->front = 'w';
+			this->back = 'y';
+		}
+		else if (this->front == 'g')
+		{
+			this->up = 'g';
+			this->down = 'b';
+			this->right = 'o';
+			this->left = 'r';
+			this->front = 'w';
+			this->back = 'y';
+		}
+		else if (this->front == 'o')
+		{
+			this->up = 'o';
+			this->down = 'r';
+			this->right = 'b';
+			this->left = 'g';
+			this->front = 'w';
+			this->back = 'y';
+		}
+	}
+	else if (this->up == 'w')
+	{
+		if (this->front == 'b')
+		{
+			this->up = 'b';
+			this->down = 'g';
+			this->right = 'o';
+			this->left = 'r';
+			this->front = 'y';
+			this->back = 'w';
+		}
+		else if (this->front == 'r')
+		{
+			this->up = 'r';
+			this->down = 'o';
+			this->right = 'b';
+			this->left = 'g';
+			this->front = 'y';
+			this->back = 'w';
+		}
+		else if (this->front == 'g')
+		{
+			this->up = 'g';
+			this->down = 'b';
+			this->right = 'r';
+			this->left = 'o';
+			this->front = 'y';
+			this->back = 'w';
+		}
+		else if (this->front == 'o')
+		{
+			this->up = 'o';
+			this->down = 'r';
+			this->right = 'g';
+			this->left = 'b';
+			this->front = 'y';
+			this->back = 'w';
+		}
+	}
+	else if (this->up == 'b')
+	{
+		if (this->front == 'w')
+		{
+			this->up = 'w';
+			this->down = 'y';
+			this->right = 'r';
+			this->left = 'o';
+			this->front = 'g';
+			this->back = 'b';
+		}
+		else if (this->front == 'r')
+		{
+			this->up = 'r';
+			this->down = 'o';
+			this->right = 'y';
+			this->left = 'w';
+			this->front = 'g';
+			this->back = 'b';
+		}
+		else if (this->front == 'y')
+		{
+			this->up = 'y';
+			this->down = 'w';
+			this->right = 'o';
+			this->left = 'r';
+			this->front = 'g';
+			this->back = 'b';
+		}
+		else if (this->front == 'o')
+		{
+			this->up = 'o';
+			this->down = 'r';
+			this->right = 'w';
+			this->left = 'y';
+			this->front = 'g';
+			this->back = 'b';
+		}
+	}
+	else if (this->up == 'r')
+	{
+		if (this->front == 'w')
+		{
+			this->up = 'w';
+			this->down = 'y';
+			this->right = 'g';
+			this->left = 'b';
+			this->front = 'o';
+			this->back = 'r';
+		}
+		else if (this->front == 'g')
+		{
+			this->up = 'g';
+			this->down = 'b';
+			this->right = 'y';
+			this->left = 'w';
+			this->front = 'o';
+			this->back = 'r';
+		}
+		else if (this->front == 'y')
+		{
+			this->up = 'y';
+			this->down = 'w';
+			this->right = 'b';
+			this->left = 'g';
+			this->front = 'o';
+			this->back = 'r';
+		}
+		else if (this->front == 'b')
+		{
+			this->up = 'b';
+			this->down = 'g';
+			this->right = 'w';
+			this->left = 'y';
+			this->front = 'o';
+			this->back = 'r';
+		}
+	}
+	else if (this->up == 'g')
+	{
+		if (this->front == 'w')
+		{
+			this->up = 'w';
+			this->down = 'y';
+			this->right = 'o';
+			this->left = 'r';
+			this->front = 'b';
+			this->back = 'g';
+		}
+		else if (this->front == 'r')
+		{
+			this->up = 'r';
+			this->down = 'o';
+			this->right = 'w';
+			this->left = 'y';
+			this->front = 'b';
+			this->back = 'g';
+		}
+		else if (this->front == 'y')
+		{
+			this->up = 'y';
+			this->down = 'w';
+			this->right = 'r';
+			this->left = 'o';
+			this->front = 'b';
+			this->back = 'g';
+		}
+		else if (this->front == 'o')
+		{
+			this->up = 'o';
+			this->down = 'r';
+			this->right = 'y';
+			this->left = 'w';
+			this->front = 'b';
+			this->back = 'g';
+		}
+	}
+	else if (this->up == 'o')
+	{
+		if (this->front == 'w')
+		{
+			this->up = 'w';
+			this->down = 'y';
+			this->right = 'b';
+			this->left = 'g';
+			this->front = 'r';
+			this->back = 'o';
+		}
+		else if (this->front == 'g')
+		{
+			this->up = 'g';
+			this->down = 'b';
+			this->right = 'w';
+			this->left = 'y';
+			this->front = 'r';
+			this->back = 'o';
+		}
+		else if (this->front == 'y')
+		{
+			this->up = 'y';
+			this->down = 'w';
+			this->right = 'g';
+			this->left = 'b';
+			this->front = 'r';
+			this->back = 'o';
+		}
+		else if (this->front == 'b')
+		{
+			this->up = 'b';
+			this->down = 'g';
+			this->right = 'y';
+			this->left = 'w';
+			this->front = 'r';
+			this->back = 'o';
+		}
+	}
+}
+
+void Cube::xt(){
+	this->x();
+	this->x();
+	this->x();
+}
+
+void Cube::x2(){
+	this->x();
+	this->x();
+}
+
+void Cube::y(){
+	if (this->up == 'y')
+	{
+		if (this->front == 'b')
+		{
+			this->up = 'y';
+			this->down = 'w';
+			this->right = 'g';
+			this->left = 'b';
+			this->front = 'r';
+			this->back = 'o';
+		}
+		else if (this->front == 'r')
+		{
+			this->up = 'y';
+			this->down = 'w';
+			this->right = 'o';
+			this->left = 'r';
+			this->front = 'g';
+			this->back = 'b';
+		}
+		else if (this->front == 'g')
+		{
+			this->up = 'y';
+			this->down = 'w';
+			this->right = 'b';
+			this->left = 'g';
+			this->front = 'o';
+			this->back = 'r';
+		}
+		else if (this->front == 'o')
+		{
+			this->up = 'y';
+			this->down = 'w';
+			this->right = 'r';
+			this->left = 'o';
+			this->front = 'b';
+			this->back = 'g';
+		}
+	}
+	else if (this->up == 'w')
+	{
+		if (this->front == 'b')
+		{
+			this->up = 'w';
+			this->down = 'y';
+			this->right = 'g';
+			this->left = 'b';
+			this->front = 'o';
+			this->back = 'r';
+		}
+		else if (this->front == 'r')
+		{
+			this->up = 'w';
+			this->down = 'y';
+			this->right = 'o';
+			this->left = 'r';
+			this->front = 'b';
+			this->back = 'g';
+		}
+		else if (this->front == 'g')
+		{
+			this->up = 'w';
+			this->down = 'y';
+			this->right = 'b';
+			this->left = 'g';
+			this->front = 'r';
+			this->back = 'o';
+		}
+		else if (this->front == 'o')
+		{
+			this->up = 'w';
+			this->down = 'y';
+			this->right = 'r';
+			this->left = 'o';
+			this->front = 'g';
+			this->back = 'b';
+		}
+	}
+	else if (this->up == 'b')
+	{
+		if (this->front == 'w')
+		{
+			this->up = 'b';
+			this->down = 'g';
+			this->right = 'y';
+			this->left = 'w';
+			this->front = 'r';
+			this->back = 'o';
+		}
+		else if (this->front == 'r')
+		{
+			this->up = 'b';
+			this->down = 'g';
+			this->right = 'o';
+			this->left = 'r';
+			this->front = 'y';
+			this->back = 'w';
+		}
+		else if (this->front == 'y')
+		{
+			this->up = 'b';
+			this->down = 'g';
+			this->right = 'w';
+			this->left = 'y';
+			this->front = 'o';
+			this->back = 'r';
+		}
+		else if (this->front == 'o')
+		{
+			this->up = 'b';
+			this->down = 'g';
+			this->right = 'r';
+			this->left = 'o';
+			this->front = 'w';
+			this->back = 'y';
+		}
+	}
+	else if (this->up == 'g')
+	{
+		if (this->front == 'w')
+		{
+			this->up = 'g';
+			this->down = 'b';
+			this->right = 'y';
+			this->left = 'w';
+			this->front = 'o';
+			this->back = 'r';
+		}
+		else if (this->front == 'o')
+		{
+			this->up = 'g';
+			this->down = 'b';
+			this->right = 'r';
+			this->left = 'o';
+			this->front = 'y';
+			this->back = 'w';
+		}
+		else if (this->front == 'y')
+		{
+			this->up = 'g';
+			this->down = 'b';
+			this->right = 'w';
+			this->left = 'y';
+			this->front = 'r';
+			this->back = 'o';
+		}
+		else if (this->front == 'r')
+		{
+			this->up = 'g';
+			this->down = 'b';
+			this->right = 'o';
+			this->left = 'r';
+			this->front = 'w';
+			this->back = 'y';
+		}
+	}
+	else if (this->up == 'r')
+	{
+		if (this->front == 'w')
+		{
+			this->up = 'r';
+			this->down = 'o';
+			this->right = 'y';
+			this->left = 'w';
+			this->front = 'g';
+			this->back = 'b';
+		}
+		else if (this->front == 'g')
+		{
+			this->up = 'r';
+			this->down = 'o';
+			this->right = 'b';
+			this->left = 'g';
+			this->front = 'y';
+			this->back = 'w';
+		}
+		else if (this->front == 'y')
+		{
+			this->up = 'r';
+			this->down = 'o';
+			this->right = 'w';
+			this->left = 'y';
+			this->front = 'b';
+			this->back = 'g';
+		}
+		else if (this->front == 'b')
+		{
+			this->up = 'r';
+			this->down = 'o';
+			this->right = 'g';
+			this->left = 'b';
+			this->front = 'w';
+			this->back = 'y';
+		}
+	}
+	else if (this->up == 'o')
+	{
+		if (this->front == 'w')
+		{
+			this->up = 'o';
+			this->down = 'r';
+			this->right = 'y';
+			this->left = 'w';
+			this->front = 'b';
+			this->back = 'g';
+		}
+		else if (this->front == 'g')
+		{
+			this->up = 'o';
+			this->down = 'r';
+			this->right = 'b';
+			this->left = 'g';
+			this->front = 'w';
+			this->back = 'y';
+		}
+		else if (this->front == 'y')
+		{
+			this->up = 'o';
+			this->down = 'r';
+			this->right = 'w';
+			this->left = 'y';
+			this->front = 'g';
+			this->back = 'b';
+		}
+		else if (this->front == 'b')
+		{
+			this->up = 'o';
+			this->down = 'r';
+			this->right = 'g';
+			this->left = 'b';
+			this->front = 'y';
+			this->back = 'w';
+		}
+	}
+}
+
+void Cube::yt(){
+	this->y();
+	this->y();
+	this->y();
+}
+
+void Cube::y2(){
+	this->y();
+	this->y();
+}
+
+void Cube::z(){
+	if (this->up == 'y')
+	{
+		if (this->front == 'b')
+		{
+			this->up = 'o';
+			this->down = 'r';
+			this->right = 'y';
+			this->left = 'w';
+			this->front = 'b';
+			this->back = 'g';
+		}
+		else if (this->front == 'r')
+		{
+			this->up = 'b';
+			this->down = 'g';
+			this->right = 'y';
+			this->left = 'w';
+			this->front = 'r';
+			this->back = 'o';
+		}
+		else if (this->front == 'g')
+		{
+			this->up = 'r';
+			this->down = 'o';
+			this->right = 'y';
+			this->left = 'w';
+			this->front = 'g';
+			this->back = 'b';
+		}
+		else if (this->front == 'o')
+		{
+			this->up = 'g';
+			this->down = 'b';
+			this->right = 'y';
+			this->left = 'w';
+			this->front = 'o';
+			this->back = 'r';
+		}
+	}
+	else if (this->up == 'w')
+	{
+		if (this->front == 'b')
+		{
+			this->up = 'r';
+			this->down = 'o';
+			this->right = 'w';
+			this->left = 'y';
+			this->front = 'b';
+			this->back = 'g';
+		}
+		else if (this->front == 'r')
+		{
+			this->up = 'g';
+			this->down = 'b';
+			this->right = 'w';
+			this->left = 'y';
+			this->front = 'r';
+			this->back = 'o';
+		}
+		else if (this->front == 'g')
+		{
+			this->up = 'o';
+			this->down = 'r';
+			this->right = 'w';
+			this->left = 'y';
+			this->front = 'g';
+			this->back = 'b';
+		}
+		else if (this->front == 'o')
+		{
+			this->up = 'b';
+			this->down = 'g';
+			this->right = 'w';
+			this->left = 'y';
+			this->front = 'o';
+			this->back = 'r';
+		}
+	}
+	else if (this->up == 'b')
+	{
+		if (this->front == 'w')
+		{
+			this->up = 'o';
+			this->down = 'r';
+			this->right = 'b';
+			this->left = 'g';
+			this->front = 'w';
+			this->back = 'y';
+		}
+		else if (this->front == 'r')
+		{
+			this->up = 'w';
+			this->down = 'y';
+			this->right = 'b';
+			this->left = 'g';
+			this->front = 'r';
+			this->back = 'o';
+		}
+		else if (this->front == 'y')
+		{
+			this->up = 'r';
+			this->down = 'o';
+			this->right = 'b';
+			this->left = 'g';
+			this->front = 'y';
+			this->back = 'w';
+		}
+		else if (this->front == 'o')
+		{
+			this->up = 'o';
+			this->down = 'r';
+			this->right = 'b';
+			this->left = 'g';
+			this->front = 'o';
+			this->back = 'r';
+		}
+	}
+	else if (this->up == 'g')
+	{
+		if (this->front == 'w')
+		{
+			this->up = 'r';
+			this->down = 'o';
+			this->right = 'g';
+			this->left = 'b';
+			this->front = 'w';
+			this->back = 'y';
+		}
+		else if (this->front == 'r')
+		{
+			this->up = 'y';
+			this->down = 'w';
+			this->right = 'g';
+			this->left = 'b';
+			this->front = 'r';
+			this->back = 'o';
+		}
+		else if (this->front == 'y')
+		{
+			this->up = 'o';
+			this->down = 'r';
+			this->right = 'g';
+			this->left = 'b';
+			this->front = 'y';
+			this->back = 'w';
+		}
+		else if (this->front == 'o')
+		{
+			this->up = 'w';
+			this->down = 'y';
+			this->right = 'g';
+			this->left = 'b';
+			this->front = 'o';
+			this->back = 'r';
+		}
+	}
+	else if (this->up == 'r')
+	{
+		if (this->front == 'w')
+		{
+			this->up = 'b';
+			this->down = 'g';
+			this->right = 'r';
+			this->left = 'o';
+			this->front = 'w';
+			this->back = 'y';
+		}
+		else if (this->front == 'g')
+		{
+			this->up = 'w';
+			this->down = 'y';
+			this->right = 'r';
+			this->left = 'o';
+			this->front = 'g';
+			this->back = 'b';
+		}
+		else if (this->front == 'y')
+		{
+			this->up = 'g';
+			this->down = 'b';
+			this->right = 'r';
+			this->left = 'o';
+			this->front = 'y';
+			this->back = 'w';
+		}
+		else if (this->front == 'b')
+		{
+			this->up = 'y';
+			this->down = 'w';
+			this->right = 'r';
+			this->left = 'o';
+			this->front = 'b';
+			this->back = 'g';
+		}
+	}
+	else if (this->up == 'o')
+	{
+		if (this->front == 'w')
+		{
+			this->up = 'g';
+			this->down = 'b';
+			this->right = 'o';
+			this->left = 'r';
+			this->front = 'w';
+			this->back = 'y';
+		}
+		else if (this->front == 'g')
+		{
+			this->up = 'y';
+			this->down = 'w';
+			this->right = 'o';
+			this->left = 'r';
+			this->front = 'g';
+			this->back = 'b';
+		}
+		else if (this->front == 'y')
+		{
+			this->up = 'b';
+			this->down = 'g';
+			this->right = 'o';
+			this->left = 'r';
+			this->front = 'y';
+			this->back = 'w';
+		}
+		else if (this->front == 'b')
+		{
+			this->up = 'w';
+			this->down = 'y';
+			this->right = 'o';
+			this->left = 'r';
+			this->front = 'b';
+			this->back = 'g';
+		}
+	}
+}
+
+void Cube::zt(){
+	this->z();
+	this->z();
+	this->z();
+}
+
+void Cube::z2(){
+	this->z();
+	this->z();
 }
 
 int main(){
 	Cube cubeobj;
 	cubeobj.printMatrix();
 
-	cubeobj.rt();
+	cubeobj.b2();
 
 	cubeobj.printMatrix();
 
