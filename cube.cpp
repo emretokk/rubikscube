@@ -1,4 +1,7 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <time.h>
+#include <stdio.h>
+#include <stdlib.h>
 #include "cube.h"
 
 using namespace std;
@@ -2923,16 +2926,19 @@ void Cube::B2(){
 void Cube::M(){
 	this->R();
 	this->Lt();
+	this->xt();
 }
 
 void Cube::Mt(){
 	this->Rt();
 	this->L();
+	this->x();
 }
 
 void Cube::M2(){
 	this->Mt();
 	this->Mt();
+	this->x2();
 }
 
 void Cube::r(){
@@ -3775,19 +3781,50 @@ void Cube::z2(){
 	this->z();
 }
 
-int main(){
-	Cube cubeobj;
-	cubeobj.printMatrix();
+void Cube::shuffle(){
+	srand(time(NULL));
+	int movecount;
+	movecount = rand() % 20 + 15;
 
-	cubeobj.b2();
+	string shuffleAlgorithm[movecount];
+	int cc = 0;
 
-	cubeobj.printMatrix();
+	for (int i=0;i<movecount;++i)
+	{
+		int rotatecount;
+		rotatecount = rand() % 18 + 1;
 
-	// char* whitematrix = cube.Red::getMatrix();
-	// for (int i=0;i<9;++i)
-	// {
-	// 	cout << *(whitematrix+i);
-	// }
 
-	return 0;
+		if (rotatecount == 1) {this->R(); shuffleAlgorithm[cc] = "R"; cc++;}
+		else if (rotatecount == 2) {this->Rt(); shuffleAlgorithm[cc] = "Rt"; cc++;}
+		else if (rotatecount == 3) {this->R2(); shuffleAlgorithm[cc] = "R2"; cc++;}
+
+		else if (rotatecount == 4) {this->L(); shuffleAlgorithm[cc] = "L"; cc++;}
+		else if (rotatecount == 5) {this->Lt(); shuffleAlgorithm[cc] = "Lt"; cc++;}
+		else if (rotatecount == 6) {this->L2(); shuffleAlgorithm[cc] = "L2"; cc++;}
+
+		else if (rotatecount == 7) {this->U(); shuffleAlgorithm[cc] = "U"; cc++;}
+		else if (rotatecount == 8) {this->Ut(); shuffleAlgorithm[cc] = "Ut"; cc++;}
+		else if (rotatecount == 9) {this->U2(); shuffleAlgorithm[cc] = "U2"; cc++;}
+
+		else if (rotatecount == 10) {this->F(); shuffleAlgorithm[cc] = "F"; cc++;}
+		else if (rotatecount == 11) {this->Ft(); shuffleAlgorithm[cc] = "Ft"; cc++;}
+		else if (rotatecount == 12) {this->F2(); shuffleAlgorithm[cc] = "F2"; cc++;}
+
+		else if (rotatecount == 13) {this->D(); shuffleAlgorithm[cc] = "D"; cc++;}
+		else if (rotatecount == 14) {this->Dt(); shuffleAlgorithm[cc] = "Dt"; cc++;}
+		else if (rotatecount == 15) {this->D2(); shuffleAlgorithm[cc] = "D2"; cc++;}
+
+		else if (rotatecount == 16) {this->B(); shuffleAlgorithm[cc] = "B"; cc++;}
+		else if (rotatecount == 17) {this->Bt(); shuffleAlgorithm[cc] = "Bt"; cc++;}
+		else if (rotatecount == 18) {this->B2(); shuffleAlgorithm[cc] = "B2"; cc++;}
+
+	}
+	cout << "\nShuffle Algorithm :\n";
+
+	for (int i=0;i<movecount;++i)
+	{
+		cout << shuffleAlgorithm[i] << " ";
+	}
+	cout << "\n\n";
 }

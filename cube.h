@@ -1,5 +1,7 @@
 #ifndef CUBE_H
 #define CUBE_H
+#include <string>
+using namespace std;
 
 class White
 {
@@ -95,10 +97,34 @@ private:
 	char right='r';
 	char left='o';
 	char back='g';
+	string rotations[49] = {
+		"R", "Rt", "R2", "r", "rt", "r2",
+		"L", "Lt", "L2", "l", "lt", "l2",
+		"U", "Ut", "U2", "u", "ut", "u2",
+		"F", "Ft", "F2", "f", "ft", "f2",
+		"D", "Dt", "D2", "d", "dt", "d2",
+		"B", "Bt", "B2", "b", "bt", "b2",
+		"M", "Mt", "M2",
+		"x", "xt", "x2",
+		"y", "yt", "y2",
+		"z", "zt", "z2", "shuffle"
+	};
 
 public:
 	Cube(){};
 	~Cube(){};
+
+	//GETTER
+
+	string* getRotations(){
+		return rotations;
+	}
+
+	// Shuffle
+
+	void shuffle();
+
+	// Print Cube
 
 	void printMatrix();
 
